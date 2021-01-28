@@ -1,0 +1,7 @@
+name: librdkafka
+builder:
+  name: BalabitBuilder
+  configure_options: "--no-download"
+  flags: "out-of-tree-build-incompatible"
+platforms:
+  - linux-glibc2.11/amd64
