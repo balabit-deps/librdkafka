@@ -1,3 +1,5 @@
+sbuild/build/*
+sbuild/dist/*
 config.h
 config.log*
 config.cache
