@@ -1,0 +1,15 @@
+source="librdkafka"
+version=1.5.3-pe-1
+dependencies=(
+  'libssl' 'libssl-dev' 'libsasl' 'libsasl-dev'  'zlib' 'zlib-dev' 'libkrb5' 'libkrb5-dev'
+)
+
+build() {
+  # out-of-tree build is not supported by mklove
+  ${src_dir}/configure --prefix="${prefix}"
+  make all
+}
+
+install() {
+  make DESTDIR="${dest_dir}" install
+}
